@@ -1,79 +1,67 @@
 # Microsoft.Extensions.AI Integration
 
-ScrapeGraphAI provides `AIFunction` tools for seamless integration with any `IChatClient` via [Microsoft.Extensions.AI](https://devblogs.microsoft.com/dotnet/introducing-microsoft-extensions-ai-preview/).
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The ScrapeGraphAI SDK provides `AIFunction` tool wrappers compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai). These tools can be used with any `IChatClient` to give AI models access to ScrapeGraphAI's smart web scraping, AI-powered search, markdown conversion, sitemap extraction, and credit management.
+
+## Installation
+
+```bash
+dotnet add package ScrapeGraphAI
+```
 
 ## Available Tools
 
-| Tool | Method | Description |
-|------|--------|-------------|
-| SmartScraper | `AsSmartScraperTool()` | Extract structured data from a URL using a natural language prompt |
-| SearchScraper | `AsSearchScraperTool()` | AI-powered web search with structured results |
-| Markdownify | `AsMarkdownifyTool()` | Convert a webpage to clean markdown |
-| GetCredits | `AsGetCreditsTool()` | Check remaining API credit balance |
-| GetSitemap | `AsGetSitemapTool()` | Extract all URLs from a website's sitemap |
+| Method | Tool Name | Description |
+|--------|-----------|-------------|
+| `AsSmartScraperTool()` | `SmartScraper` | Extract structured data from a URL using natural language prompts |
+| `AsSearchScraperTool()` | `SearchScraper` | AI-powered web search with structured results |
+| `AsMarkdownifyTool()` | `Markdownify` | Convert a webpage to clean, readable markdown |
+| `AsGetCreditsTool()` | `GetCredits` | Check remaining API credits and total usage |
+| `AsGetSitemapTool()` | `GetSitemap` | Extract all URLs from a website's sitemap |
 
-## Usage Example
+## Usage
 
 ```csharp
-using Microsoft.Extensions.AI;
 using ScrapeGraphAI;
+using Microsoft.Extensions.AI;
 
-// Create the ScrapeGraphAI client
-using var scraper = new ScrapeGraphAIClient(apiKey);
+var scrapeClient = new ScrapeGraphAIClient(
+    apiKey: Environment.GetEnvironmentVariable("SGAI_API_KEY")!);
 
-// Create tools
-var tools = new[]
+var options = new ChatOptions
 {
-    scraper.AsSmartScraperTool(),
-    scraper.AsSearchScraperTool(),
-    scraper.AsMarkdownifyTool(),
+    Tools =
+    [
+        scrapeClient.AsSmartScraperTool(),
+        scrapeClient.AsSearchScraperTool(),
+        scrapeClient.AsMarkdownifyTool(),
+        scrapeClient.AsGetCreditsTool(),
+        scrapeClient.AsGetSitemapTool(),
+    ],
 };
 
-// Use with any IChatClient
 IChatClient chatClient = /* your chat client */;
-var response = await chatClient.GetResponseAsync(
-    "Extract the main heading from https://example.com",
-    new ChatOptions { Tools = tools });
-```
 
-## Tool Details
+var messages = new List<ChatMessage>
+{
+    new(ChatRole.User, "Extract the pricing information from https://example.com/pricing"),
+};
 
-### SmartScraper
+while (true)
+{
+    var response = await chatClient.GetResponseAsync(messages, options);
+    messages.AddRange(response.ToChatMessages());
 
-Extracts structured data from any website using AI. Requires a URL and a natural language prompt describing what to extract.
+    if (response.FinishReason == ChatFinishReason.ToolCalls)
+    {
+        var results = await response.CallToolsAsync(options);
+        messages.AddRange(results);
+        continue;
+    }
 
-```csharp
-var tool = client.AsSmartScraperTool();
-```
-
-### SearchScraper
-
-Performs an AI-powered web search and returns structured results. Optionally configure the number of results (3-20).
-
-```csharp
-var tool = client.AsSearchScraperTool(numResults: 5);
-```
-
-### Markdownify
-
-Converts a webpage to clean, readable markdown format.
-
-```csharp
-var tool = client.AsMarkdownifyTool();
-```
-
-### GetCredits
-
-Retrieves the current credit balance and total credits used.
-
-```csharp
-var tool = client.AsGetCreditsTool();
-```
-
-### GetSitemap
-
-Extracts all URLs from a website's sitemap.
-
-```csharp
-var tool = client.AsGetSitemapTool();
+    Console.WriteLine(response.Text);
+    break;
+}
 ```
