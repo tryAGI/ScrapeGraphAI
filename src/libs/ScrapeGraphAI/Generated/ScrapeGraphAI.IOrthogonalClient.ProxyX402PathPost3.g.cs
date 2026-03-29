@@ -1,0 +1,19 @@
+#nullable enable
+
+namespace ScrapeGraphAI
+{
+    public partial interface IOrthogonalClient
+    {
+        /// <summary>
+        /// Proxy<br/>
+        /// Proxy endpoint for Orthogonal API integration.<br/>
+        /// Forwards requests to https://api.orth.sh/pay/{ORTHOGONHAL_API_KEY}/{path}
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
+        global::System.Threading.Tasks.Task<string> ProxyX402PathPost3Async(
+            string path,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
