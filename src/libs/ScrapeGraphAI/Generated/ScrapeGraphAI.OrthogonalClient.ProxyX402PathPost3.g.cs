@@ -5,18 +5,18 @@ namespace ScrapeGraphAI
 {
     public partial class OrthogonalClient
     {
-        partial void PrepareProxyX402PathDelete5Arguments(
+        partial void PrepareProxyX402PathPost3Arguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string path);
-        partial void PrepareProxyX402PathDelete5Request(
+        partial void PrepareProxyX402PathPost3Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string path);
-        partial void ProcessProxyX402PathDelete5Response(
+        partial void ProcessProxyX402PathPost3Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessProxyX402PathDelete5ResponseContent(
+        partial void ProcessProxyX402PathPost3ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
@@ -29,13 +29,13 @@ namespace ScrapeGraphAI
         /// <param name="path"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> ProxyX402PathDelete5Async(
+        public async global::System.Threading.Tasks.Task<string> ProxyX402PathPost3Async(
             string path,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareProxyX402PathDelete5Arguments(
+            PrepareProxyX402PathPost3Arguments(
                 httpClient: HttpClient,
                 path: ref path);
 
@@ -70,7 +70,7 @@ namespace ScrapeGraphAI
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareProxyX402PathDelete5Request(
+            PrepareProxyX402PathPost3Request(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 path: path);
@@ -83,7 +83,7 @@ namespace ScrapeGraphAI
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessProxyX402PathDelete5Response(
+            ProcessProxyX402PathPost3Response(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // Validation Error
@@ -137,7 +137,7 @@ namespace ScrapeGraphAI
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessProxyX402PathDelete5ResponseContent(
+                ProcessProxyX402PathPost3ResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
