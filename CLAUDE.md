@@ -14,7 +14,7 @@ dotnet test src/tests/IntegrationTests/
 
 ## Auth
 
-Bearer token auth (converted to `SGAI-APIKEY` header via PrepareRequest hook):
+API key auth via `SGAI-APIKEY` header (native via `--security-scheme`):
 
 ```csharp
 var client = new ScrapeGraphAIClient(apiKey); // SGAI_API_KEY env var
@@ -25,25 +25,9 @@ var client = new ScrapeGraphAIClient(apiKey); // SGAI_API_KEY env var
 - `src/libs/ScrapeGraphAI/openapi.yaml` -- OpenAPI spec (downloaded from api.scrapegraphai.com)
 - `src/libs/ScrapeGraphAI/generate.sh` -- Downloads spec, runs autosdk with `--security-scheme` and `--base-url`
 - `src/libs/ScrapeGraphAI/Generated/` -- **Never edit** -- auto-generated code
-- `src/libs/ScrapeGraphAI/Extensions/ScrapeGraphAIClient.Auth.cs` -- PrepareRequest hook: `Bearer -> SGAI-APIKEY`
 - `src/libs/ScrapeGraphAI/Extensions/ScrapeGraphAIClientExtensions.Tools.cs` -- MEAI AIFunction tools
 - `src/tests/IntegrationTests/Tests.cs` -- Test helper with bearer auth
 - `src/tests/IntegrationTests/Examples/` -- Example tests (also generate docs)
-
-## Auth Hook
-
-ScrapeGraphAI uses `SGAI-APIKEY` as a custom header (not Authorization). The `PrepareRequest` hook in `Extensions/ScrapeGraphAIClient.Auth.cs` rewrites the Bearer auth:
-
-```csharp
-partial void PrepareRequest(HttpClient client, HttpRequestMessage request)
-{
-    if (request.Headers.Authorization is { Scheme: "Bearer", Parameter: { } apiKey })
-    {
-        request.Headers.Authorization = null;
-        request.Headers.TryAddWithoutValidation("SGAI-APIKEY", apiKey);
-    }
-}
-```
 
 ## Sub-client Pattern
 
