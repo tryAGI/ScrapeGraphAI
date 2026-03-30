@@ -7,5 +7,5 @@ autosdk generate openapi.yaml \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations \
-  --security-scheme Http:Header:Bearer \
+  --security-scheme ApiKey:Header:SGAI-APIKEY \
   --base-url https://api.scrapegraphai.com

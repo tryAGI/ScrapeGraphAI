@@ -6,7 +6,7 @@ namespace ScrapeGraphAI
     public sealed partial class ScrapeGraphAIClient
     {
         /// <inheritdoc/>
-        public void AuthorizeUsingBearer(
+        public void AuthorizeUsingApiKeyInHeader(
             string apiKey)
         {
             apiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
@@ -14,9 +14,9 @@ namespace ScrapeGraphAI
             Authorizations.Clear();
             Authorizations.Add(new global::ScrapeGraphAI.EndPointAuthorization
             {
-                Type = "Http",
+                Type = "ApiKey",
                 Location = "Header",
-                Name = "Bearer",
+                Name = "SGAI-APIKEY",
                 Value = apiKey,
             });
         }
