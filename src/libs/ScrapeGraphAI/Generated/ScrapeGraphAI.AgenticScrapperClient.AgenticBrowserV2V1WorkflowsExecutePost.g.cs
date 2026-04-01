@@ -258,6 +258,7 @@ namespace ScrapeGraphAI
             global::System.Collections.Generic.IList<string>? outputVariables = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::ScrapeGraphAI.WorkflowDefinition
             {
                 WorkflowId = workflowId,

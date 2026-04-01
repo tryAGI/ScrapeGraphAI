@@ -278,6 +278,7 @@ namespace ScrapeGraphAI
             global::ScrapeGraphAI.TimeRange? timeRange = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::ScrapeGraphAI.SearchScraperRequest
             {
                 UserPrompt = userPrompt,

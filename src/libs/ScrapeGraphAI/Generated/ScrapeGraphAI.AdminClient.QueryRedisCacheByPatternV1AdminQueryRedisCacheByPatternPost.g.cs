@@ -233,6 +233,7 @@ namespace ScrapeGraphAI
             string? pattern = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::ScrapeGraphAI.QueryRedisCacheByPatternRequest
             {
                 Cursor = cursor,

@@ -234,6 +234,7 @@ namespace ScrapeGraphAI
             bool? stream = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::ScrapeGraphAI.SitemapRequest
             {
                 WebsiteUrl = websiteUrl,
