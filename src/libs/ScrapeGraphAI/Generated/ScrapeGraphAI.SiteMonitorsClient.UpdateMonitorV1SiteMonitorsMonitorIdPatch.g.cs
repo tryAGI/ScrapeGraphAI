@@ -245,7 +245,6 @@ namespace ScrapeGraphAI
             bool? isActive = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::ScrapeGraphAI.SiteMonitorUpdate
             {
                 Name = name,

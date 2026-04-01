@@ -229,7 +229,6 @@ namespace ScrapeGraphAI
             string prompt,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::ScrapeGraphAI.EndPointSuggestionRequest
             {
                 WebsiteUrl = websiteUrl,

@@ -256,7 +256,6 @@ namespace ScrapeGraphAI
             int? waitMs = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::ScrapeGraphAI.ScrapeRequest
             {
                 WebsiteUrl = websiteUrl,

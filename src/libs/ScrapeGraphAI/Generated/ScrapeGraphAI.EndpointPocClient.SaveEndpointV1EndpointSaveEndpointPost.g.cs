@@ -223,7 +223,6 @@ namespace ScrapeGraphAI
             global::System.Collections.Generic.IList<global::ScrapeGraphAI.EndpointSuggestion> suggestions,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::ScrapeGraphAI.EndPointSuggestions
             {
                 Suggestions = suggestions,
