@@ -223,6 +223,7 @@ namespace ScrapeGraphAI
             string sessionId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::ScrapeGraphAI.AgenticScrapperStopSessionRequest
             {
                 SessionId = sessionId,

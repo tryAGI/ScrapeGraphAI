@@ -237,6 +237,7 @@ namespace ScrapeGraphAI
             object? existingSchema = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::ScrapeGraphAI.SchemaGenerationRequest
             {
                 UserPrompt = userPrompt,
