@@ -12,7 +12,7 @@ namespace ScrapeGraphAI
         /// <param name="path"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
-        global::System.Threading.Tasks.Task<string> ProxyX402PathDelete4Async(
+        global::System.Threading.Tasks.Task<string> ProxyX402PathPost2Async(
             string path,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
