@@ -235,7 +235,6 @@ namespace ScrapeGraphAI
             string jobId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new object
             {
             };

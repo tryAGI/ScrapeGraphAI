@@ -319,7 +319,6 @@ namespace ScrapeGraphAI
             bool? isMultipageChild = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::ScrapeGraphAI.SmartscraperRequest
             {
                 WebsiteUrl = websiteUrl,
