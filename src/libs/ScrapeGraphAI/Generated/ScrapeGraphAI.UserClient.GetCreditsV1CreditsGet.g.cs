@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class UserClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_GetCreditsV1CreditsGetSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_GetCreditsV1CreditsGetSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_GetCreditsV1CreditsGetSecurityRequirement0,
+            };
         partial void PrepareGetCreditsV1CreditsGetArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareGetCreditsV1CreditsGetRequest(
@@ -32,9 +51,15 @@ namespace ScrapeGraphAI
             PrepareGetCreditsV1CreditsGetArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetCreditsV1CreditsGetSecurityRequirements,
+                operationName: "GetCreditsV1CreditsGetAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: "/v1/credits",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -44,7 +69,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

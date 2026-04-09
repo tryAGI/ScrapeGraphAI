@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class MarkdownifyClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_GetMarkdownifyStatusV1MarkdownifyRequestIdGetSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_GetMarkdownifyStatusV1MarkdownifyRequestIdGetSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_GetMarkdownifyStatusV1MarkdownifyRequestIdGetSecurityRequirement0,
+            };
         partial void PrepareGetMarkdownifyStatusV1MarkdownifyRequestIdGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string requestId);
@@ -37,9 +56,15 @@ namespace ScrapeGraphAI
                 httpClient: HttpClient,
                 requestId: ref requestId);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetMarkdownifyStatusV1MarkdownifyRequestIdGetSecurityRequirements,
+                operationName: "GetMarkdownifyStatusV1MarkdownifyRequestIdGetAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: $"/v1/markdownify/{requestId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -49,7 +74,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -12,7 +12,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.scrapegraphai.com";
+        public const string DefaultBaseUrl = "https://api.scrapegraphai.com/";
 
         private bool _disposeHttpClient = true;
 
