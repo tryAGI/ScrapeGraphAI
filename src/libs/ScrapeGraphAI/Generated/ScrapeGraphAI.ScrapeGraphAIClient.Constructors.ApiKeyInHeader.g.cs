@@ -6,6 +6,7 @@ namespace ScrapeGraphAI
     public sealed partial class ScrapeGraphAIClient
     {
         /// <inheritdoc cref="ScrapeGraphAIClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::ScrapeGraphAI.EndPointAuthorization}?, bool)"/>
+
         public ScrapeGraphAIClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

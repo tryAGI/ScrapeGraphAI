@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class SiteMonitorsClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_DeleteMonitorV1SiteMonitorsMonitorIdDeleteSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_DeleteMonitorV1SiteMonitorsMonitorIdDeleteSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_DeleteMonitorV1SiteMonitorsMonitorIdDeleteSecurityRequirement0,
+            };
         partial void PrepareDeleteMonitorV1SiteMonitorsMonitorIdDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string monitorId);
@@ -38,9 +57,15 @@ namespace ScrapeGraphAI
                 httpClient: HttpClient,
                 monitorId: ref monitorId);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteMonitorV1SiteMonitorsMonitorIdDeleteSecurityRequirements,
+                operationName: "DeleteMonitorV1SiteMonitorsMonitorIdDeleteAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: $"/v1/site-monitors/{monitorId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -50,7 +75,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

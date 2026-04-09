@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class ScheduledJobsClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_GetJobExecutionsV1ScheduledJobsJobIdExecutionsGetSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_GetJobExecutionsV1ScheduledJobsJobIdExecutionsGetSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_GetJobExecutionsV1ScheduledJobsJobIdExecutionsGetSecurityRequirement0,
+            };
         partial void PrepareGetJobExecutionsV1ScheduledJobsJobIdExecutionsGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string jobId,
@@ -61,6 +80,12 @@ namespace ScrapeGraphAI
                 pageSize: ref pageSize,
                 status: ref status);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetJobExecutionsV1ScheduledJobsJobIdExecutionsGetSecurityRequirements,
+                operationName: "GetJobExecutionsV1ScheduledJobsJobIdExecutionsGetAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: $"/v1/scheduled-jobs/{jobId}/executions",
                 baseUri: HttpClient.BaseAddress); 
@@ -68,7 +93,7 @@ namespace ScrapeGraphAI
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("page_size", pageSize?.ToString())
                 .AddOptionalParameter("status", status) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -78,7 +103,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

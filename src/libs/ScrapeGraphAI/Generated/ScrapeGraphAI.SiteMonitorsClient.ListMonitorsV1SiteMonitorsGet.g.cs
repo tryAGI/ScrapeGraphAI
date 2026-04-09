@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class SiteMonitorsClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_ListMonitorsV1SiteMonitorsGetSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_ListMonitorsV1SiteMonitorsGetSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_ListMonitorsV1SiteMonitorsGetSecurityRequirement0,
+            };
         partial void PrepareListMonitorsV1SiteMonitorsGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
@@ -52,6 +71,12 @@ namespace ScrapeGraphAI
                 pageSize: ref pageSize,
                 isActive: isActive);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListMonitorsV1SiteMonitorsGetSecurityRequirements,
+                operationName: "ListMonitorsV1SiteMonitorsGetAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: "/v1/site-monitors",
                 baseUri: HttpClient.BaseAddress); 
@@ -59,7 +84,7 @@ namespace ScrapeGraphAI
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("page_size", pageSize?.ToString())
                 .AddOptionalParameter("is_active", isActive?.ToString().ToLowerInvariant()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -69,7 +94,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class ScheduledJobsClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_TriggerJobManuallyV1ScheduledJobsJobIdTriggerPostSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_TriggerJobManuallyV1ScheduledJobsJobIdTriggerPostSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_TriggerJobManuallyV1ScheduledJobsJobIdTriggerPostSecurityRequirement0,
+            };
         partial void PrepareTriggerJobManuallyV1ScheduledJobsJobIdTriggerPostArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string jobId);
@@ -39,9 +58,15 @@ namespace ScrapeGraphAI
                 httpClient: HttpClient,
                 jobId: ref jobId);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_TriggerJobManuallyV1ScheduledJobsJobIdTriggerPostSecurityRequirements,
+                operationName: "TriggerJobManuallyV1ScheduledJobsJobIdTriggerPostAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: $"/v1/scheduled-jobs/{jobId}/trigger",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -51,7 +76,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

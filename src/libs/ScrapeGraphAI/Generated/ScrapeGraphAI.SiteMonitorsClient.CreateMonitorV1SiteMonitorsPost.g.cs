@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class SiteMonitorsClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_CreateMonitorV1SiteMonitorsPostSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_CreateMonitorV1SiteMonitorsPostSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_CreateMonitorV1SiteMonitorsPostSecurityRequirement0,
+            };
         partial void PrepareCreateMonitorV1SiteMonitorsPostArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::ScrapeGraphAI.SiteMonitorCreate request);
@@ -41,9 +60,15 @@ namespace ScrapeGraphAI
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateMonitorV1SiteMonitorsPostSecurityRequirements,
+                operationName: "CreateMonitorV1SiteMonitorsPostAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: "/v1/site-monitors",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -53,7 +78,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

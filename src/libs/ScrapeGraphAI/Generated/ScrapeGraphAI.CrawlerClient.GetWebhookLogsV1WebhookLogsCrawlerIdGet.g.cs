@@ -5,6 +5,25 @@ namespace ScrapeGraphAI
 {
     public partial class CrawlerClient
     {
+
+
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_GetWebhookLogsV1WebhookLogsCrawlerIdGetSecurityRequirement0 =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
+                {                    new global::ScrapeGraphAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "SGAI-APIKEY",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_GetWebhookLogsV1WebhookLogsCrawlerIdGetSecurityRequirements =
+            new global::ScrapeGraphAI.EndPointSecurityRequirement[]
+            {                s_GetWebhookLogsV1WebhookLogsCrawlerIdGetSecurityRequirement0,
+            };
         partial void PrepareGetWebhookLogsV1WebhookLogsCrawlerIdGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string crawlerId);
@@ -38,9 +57,15 @@ namespace ScrapeGraphAI
                 httpClient: HttpClient,
                 crawlerId: ref crawlerId);
 
+
+            var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWebhookLogsV1WebhookLogsCrawlerIdGetSecurityRequirements,
+                operationName: "GetWebhookLogsV1WebhookLogsCrawlerIdGetAsync");
+
             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
                 path: $"/v1/webhook/logs/{crawlerId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -50,7 +75,7 @@ namespace ScrapeGraphAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
