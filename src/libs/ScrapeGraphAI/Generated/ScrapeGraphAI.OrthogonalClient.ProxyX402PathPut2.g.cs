@@ -7,7 +7,7 @@ namespace ScrapeGraphAI
     {
 
 
-        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_ProxyX402PathPost4SecurityRequirement0 =
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_ProxyX402PathPut2SecurityRequirement0 =
             new global::ScrapeGraphAI.EndPointSecurityRequirement
             {
                 Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
@@ -21,22 +21,22 @@ namespace ScrapeGraphAI
                     },
                 },
             };
-        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_ProxyX402PathPost4SecurityRequirements =
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_ProxyX402PathPut2SecurityRequirements =
             new global::ScrapeGraphAI.EndPointSecurityRequirement[]
-            {                s_ProxyX402PathPost4SecurityRequirement0,
+            {                s_ProxyX402PathPut2SecurityRequirement0,
             };
-        partial void PrepareProxyX402PathPost4Arguments(
+        partial void PrepareProxyX402PathPut2Arguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string path);
-        partial void PrepareProxyX402PathPost4Request(
+        partial void PrepareProxyX402PathPut2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string path);
-        partial void ProcessProxyX402PathPost4Response(
+        partial void ProcessProxyX402PathPut2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessProxyX402PathPost4ResponseContent(
+        partial void ProcessProxyX402PathPut2ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
@@ -50,22 +50,22 @@ namespace ScrapeGraphAI
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> ProxyX402PathPost4Async(
+        public async global::System.Threading.Tasks.Task<string> ProxyX402PathPut2Async(
             string path,
             global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareProxyX402PathPost4Arguments(
+            PrepareProxyX402PathPut2Arguments(
                 httpClient: HttpClient,
                 path: ref path);
 
 
             var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_ProxyX402PathPost4SecurityRequirements,
-                operationName: "ProxyX402PathPost4Async");
+                securityRequirements: s_ProxyX402PathPut2SecurityRequirements,
+                operationName: "ProxyX402PathPut2Async");
 
             using var __timeoutCancellationTokenSource = global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -92,7 +92,7 @@ namespace ScrapeGraphAI
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: new global::System.Net.Http.HttpMethod("PATCH"),
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -123,7 +123,7 @@ namespace ScrapeGraphAI
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareProxyX402PathPost4Request(
+                PrepareProxyX402PathPut2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     path: path);
@@ -143,10 +143,10 @@ namespace ScrapeGraphAI
                     await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ProxyX402PathPost4",
-                                methodName: "ProxyX402PathPost4Async",
+                                operationId: "ProxyX402PathPut2",
+                                methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "PATCH",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -170,10 +170,10 @@ namespace ScrapeGraphAI
                         await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ProxyX402PathPost4",
-                                methodName: "ProxyX402PathPost4Async",
+                                operationId: "ProxyX402PathPut2",
+                                methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "PATCH",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -205,10 +205,10 @@ namespace ScrapeGraphAI
                         await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ProxyX402PathPost4",
-                                methodName: "ProxyX402PathPost4Async",
+                                operationId: "ProxyX402PathPut2",
+                                methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "PATCH",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -244,7 +244,7 @@ namespace ScrapeGraphAI
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessProxyX402PathPost4Response(
+                ProcessProxyX402PathPut2Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -252,10 +252,10 @@ namespace ScrapeGraphAI
                     await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ProxyX402PathPost4",
-                                methodName: "ProxyX402PathPost4Async",
+                                operationId: "ProxyX402PathPut2",
+                                methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "PATCH",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -272,10 +272,10 @@ namespace ScrapeGraphAI
                     await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ProxyX402PathPost4",
-                                methodName: "ProxyX402PathPost4Async",
+                                operationId: "ProxyX402PathPut2",
+                                methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "PATCH",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -338,7 +338,7 @@ namespace ScrapeGraphAI
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessProxyX402PathPost4ResponseContent(
+                                ProcessProxyX402PathPut2ResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
