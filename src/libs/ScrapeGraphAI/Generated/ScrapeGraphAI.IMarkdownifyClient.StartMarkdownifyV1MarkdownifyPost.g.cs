@@ -8,11 +8,13 @@ namespace ScrapeGraphAI
         /// Start Markdownify
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.CompletedMarkdownifyResponse> StartMarkdownifyV1MarkdownifyPostAsync(
 
             global::ScrapeGraphAI.MarkdownifyRequest request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Start Markdownify
@@ -51,6 +53,7 @@ namespace ScrapeGraphAI
         /// <param name="webhookUrl">
         /// Webhook URL to send the job result to
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.CompletedMarkdownifyResponse> StartMarkdownifyV1MarkdownifyPostAsync(
@@ -65,6 +68,7 @@ namespace ScrapeGraphAI
             global::System.Collections.Generic.Dictionary<string, string>? headers = default,
             global::System.Collections.Generic.IList<string>? steps = default,
             string? webhookUrl = default,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

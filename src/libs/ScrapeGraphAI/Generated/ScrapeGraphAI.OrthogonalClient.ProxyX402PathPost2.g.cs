@@ -3,11 +3,11 @@
 
 namespace ScrapeGraphAI
 {
-    public partial class HistoryClient
+    public partial class OrthogonalClient
     {
 
 
-        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_GetCrawlerHistoryV1HistoryCrawlGetSecurityRequirement0 =
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement s_ProxyX402PathPost2SecurityRequirement0 =
             new global::ScrapeGraphAI.EndPointSecurityRequirement
             {
                 Authorizations = new global::ScrapeGraphAI.EndPointAuthorizationRequirement[]
@@ -21,73 +21,51 @@ namespace ScrapeGraphAI
                     },
                 },
             };
-        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_GetCrawlerHistoryV1HistoryCrawlGetSecurityRequirements =
+        private static readonly global::ScrapeGraphAI.EndPointSecurityRequirement[] s_ProxyX402PathPost2SecurityRequirements =
             new global::ScrapeGraphAI.EndPointSecurityRequirement[]
-            {                s_GetCrawlerHistoryV1HistoryCrawlGetSecurityRequirement0,
+            {                s_ProxyX402PathPost2SecurityRequirement0,
             };
-        partial void PrepareGetCrawlerHistoryV1HistoryCrawlGetArguments(
+        partial void PrepareProxyX402PathPost2Arguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int? page,
-            ref int? pageSize,
-            object request);
-        partial void PrepareGetCrawlerHistoryV1HistoryCrawlGetRequest(
+            ref string path);
+        partial void PrepareProxyX402PathPost2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int? page,
-            int? pageSize,
-            object request);
-        partial void ProcessGetCrawlerHistoryV1HistoryCrawlGetResponse(
+            string path);
+        partial void ProcessProxyX402PathPost2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetCrawlerHistoryV1HistoryCrawlGetResponseContent(
+        partial void ProcessProxyX402PathPost2ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get Crawler History<br/>
-        /// Get paginated history of crawler requests.<br/>
-        /// Args:<br/>
-        ///     request: The FastAPI request object<br/>
-        ///     page: Page number (default: 1)<br/>
-        ///     page_size: Number of items per page (default: 10)<br/>
-        /// Returns:<br/>
-        ///     CrawlerHistoryResponse containing the list of requests and next page key
+        /// Proxy<br/>
+        /// Proxy endpoint for Orthogonal API integration.<br/>
+        /// Forwards requests to https://api.orth.sh/pay/{ORTHOGONHAL_API_KEY}/{path}
         /// </summary>
-        /// <param name="page">
-        /// Default Value: 1
-        /// </param>
-        /// <param name="pageSize">
-        /// Default Value: 10
-        /// </param>
-        /// <param name="request"></param>
+        /// <param name="path"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::ScrapeGraphAI.CrawlerHistoryResponse> GetCrawlerHistoryV1HistoryCrawlGetAsync(
-
-            object request,
-            int? page = default,
-            int? pageSize = default,
+        public async global::System.Threading.Tasks.Task<string> ProxyX402PathPost2Async(
+            string path,
             global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetCrawlerHistoryV1HistoryCrawlGetArguments(
+            PrepareProxyX402PathPost2Arguments(
                 httpClient: HttpClient,
-                page: ref page,
-                pageSize: ref pageSize,
-                request: request);
+                path: ref path);
 
 
             var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetCrawlerHistoryV1HistoryCrawlGetSecurityRequirements,
-                operationName: "GetCrawlerHistoryV1HistoryCrawlGetAsync");
+                securityRequirements: s_ProxyX402PathPost2SecurityRequirements,
+                operationName: "ProxyX402PathPost2Async");
 
             using var __timeoutCancellationTokenSource = global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -106,19 +84,15 @@ namespace ScrapeGraphAI
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::ScrapeGraphAI.PathBuilder(
-                                path: "/v1/history/crawl",
-                                baseUri: HttpClient.BaseAddress); 
-                            __pathBuilder
-                                .AddOptionalParameter("page", page?.ToString())
-                                .AddOptionalParameter("page_size", pageSize?.ToString()) 
-                                ;
+                                path: $"/x402/{path}",
+                                baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Get,
+                    method: global::System.Net.Http.HttpMethod.Delete,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -141,12 +115,6 @@ namespace ScrapeGraphAI
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -155,12 +123,10 @@ namespace ScrapeGraphAI
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetCrawlerHistoryV1HistoryCrawlGetRequest(
+                PrepareProxyX402PathPost2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    page: page,
-                    pageSize: pageSize,
-                    request: request);
+                    path: path);
 
                 return __httpRequest;
             }
@@ -177,10 +143,10 @@ namespace ScrapeGraphAI
                     await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetCrawlerHistoryV1HistoryCrawlGet",
-                                methodName: "GetCrawlerHistoryV1HistoryCrawlGetAsync",
-                                pathTemplate: "\"/v1/history/crawl\"",
-                                httpMethod: "GET",
+                                operationId: "ProxyX402PathPost2",
+                                methodName: "ProxyX402PathPost2Async",
+                                pathTemplate: "$\"/x402/{path}\"",
+                                httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -204,10 +170,10 @@ namespace ScrapeGraphAI
                         await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetCrawlerHistoryV1HistoryCrawlGet",
-                                methodName: "GetCrawlerHistoryV1HistoryCrawlGetAsync",
-                                pathTemplate: "\"/v1/history/crawl\"",
-                                httpMethod: "GET",
+                                operationId: "ProxyX402PathPost2",
+                                methodName: "ProxyX402PathPost2Async",
+                                pathTemplate: "$\"/x402/{path}\"",
+                                httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -239,10 +205,10 @@ namespace ScrapeGraphAI
                         await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetCrawlerHistoryV1HistoryCrawlGet",
-                                methodName: "GetCrawlerHistoryV1HistoryCrawlGetAsync",
-                                pathTemplate: "\"/v1/history/crawl\"",
-                                httpMethod: "GET",
+                                operationId: "ProxyX402PathPost2",
+                                methodName: "ProxyX402PathPost2Async",
+                                pathTemplate: "$\"/x402/{path}\"",
+                                httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -278,7 +244,7 @@ namespace ScrapeGraphAI
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetCrawlerHistoryV1HistoryCrawlGetResponse(
+                ProcessProxyX402PathPost2Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -286,10 +252,10 @@ namespace ScrapeGraphAI
                     await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetCrawlerHistoryV1HistoryCrawlGet",
-                                methodName: "GetCrawlerHistoryV1HistoryCrawlGetAsync",
-                                pathTemplate: "\"/v1/history/crawl\"",
-                                httpMethod: "GET",
+                                operationId: "ProxyX402PathPost2",
+                                methodName: "ProxyX402PathPost2Async",
+                                pathTemplate: "$\"/x402/{path}\"",
+                                httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -306,10 +272,10 @@ namespace ScrapeGraphAI
                     await global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetCrawlerHistoryV1HistoryCrawlGet",
-                                methodName: "GetCrawlerHistoryV1HistoryCrawlGetAsync",
-                                pathTemplate: "\"/v1/history/crawl\"",
-                                httpMethod: "GET",
+                                operationId: "ProxyX402PathPost2",
+                                methodName: "ProxyX402PathPost2Async",
+                                pathTemplate: "$\"/x402/{path}\"",
+                                httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -372,7 +338,7 @@ namespace ScrapeGraphAI
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetCrawlerHistoryV1HistoryCrawlGetResponseContent(
+                                ProcessProxyX402PathPost2ResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -381,9 +347,7 @@ namespace ScrapeGraphAI
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::ScrapeGraphAI.CrawlerHistoryResponse.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return __content;
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -405,15 +369,13 @@ namespace ScrapeGraphAI
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                                    var __content = await __response.Content.ReadAsStringAsync(
                 #if NET5_0_OR_GREATER
                                         __effectiveCancellationToken
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::ScrapeGraphAI.CrawlerHistoryResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return __content;
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -450,42 +412,6 @@ namespace ScrapeGraphAI
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Get Crawler History<br/>
-        /// Get paginated history of crawler requests.<br/>
-        /// Args:<br/>
-        ///     request: The FastAPI request object<br/>
-        ///     page: Page number (default: 1)<br/>
-        ///     page_size: Number of items per page (default: 10)<br/>
-        /// Returns:<br/>
-        ///     CrawlerHistoryResponse containing the list of requests and next page key
-        /// </summary>
-        /// <param name="page">
-        /// Default Value: 1
-        /// </param>
-        /// <param name="pageSize">
-        /// Default Value: 10
-        /// </param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::ScrapeGraphAI.CrawlerHistoryResponse> GetCrawlerHistoryV1HistoryCrawlGetAsync(
-            int? page = default,
-            int? pageSize = default,
-            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new object
-            {
-            };
-
-            return await GetCrawlerHistoryV1HistoryCrawlGetAsync(
-                page: page,
-                pageSize: pageSize,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

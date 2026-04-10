@@ -26,6 +26,7 @@ namespace ScrapeGraphAI
             Authorizations.Add(new global::ScrapeGraphAI.EndPointAuthorization
             {
                 Type = "ApiKey",
+                SchemeId = "ApikeySgaiApikey",
                 Location = "Header",
                 Name = "SGAI-APIKEY",
                 Value = apiKey,

@@ -10,11 +10,13 @@ namespace ScrapeGraphAI
         ///     Optionally modify an existing schema to better fit the current search query.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.SchemaGenerationResponse> StartGenerateSchemaV1GenerateSchemaPostAsync(
 
             global::ScrapeGraphAI.SchemaGenerationRequest request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Generate or modify a JSON schema based on a search query<br/>
@@ -27,11 +29,13 @@ namespace ScrapeGraphAI
         /// <param name="existingSchema">
         /// Optional existing JSON schema to modify/extend
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.SchemaGenerationResponse> StartGenerateSchemaV1GenerateSchemaPostAsync(
             string userPrompt,
             object? existingSchema = default,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
