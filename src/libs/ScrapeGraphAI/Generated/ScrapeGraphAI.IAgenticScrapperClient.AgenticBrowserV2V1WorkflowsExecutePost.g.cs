@@ -8,11 +8,13 @@ namespace ScrapeGraphAI
         /// Agentic Browser V2
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.WorkflowExecutionResult> AgenticBrowserV2V1WorkflowsExecutePostAsync(
 
             global::ScrapeGraphAI.WorkflowDefinition request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Agentic Browser V2
@@ -42,6 +44,7 @@ namespace ScrapeGraphAI
         /// <param name="outputVariables">
         /// List of variables to include in final output
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.WorkflowExecutionResult> AgenticBrowserV2V1WorkflowsExecutePostAsync(
@@ -53,6 +56,7 @@ namespace ScrapeGraphAI
             bool? useSession = default,
             object? initialContext = default,
             global::System.Collections.Generic.IList<string>? outputVariables = default,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

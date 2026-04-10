@@ -9,11 +9,13 @@ namespace ScrapeGraphAI
         /// Create a new scheduled job
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.ScheduledJobResponse> CreateScheduledJobV1ScheduledJobsPostAsync(
 
             global::ScrapeGraphAI.ScheduledJobCreate request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Scheduled Job<br/>
@@ -38,6 +40,7 @@ namespace ScrapeGraphAI
         /// <param name="webhookUrl">
         /// Webhook URL to send the job result to
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.ScheduledJobResponse> CreateScheduledJobV1ScheduledJobsPostAsync(
@@ -47,6 +50,7 @@ namespace ScrapeGraphAI
             object jobConfig,
             bool? isActive = default,
             string? webhookUrl = default,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

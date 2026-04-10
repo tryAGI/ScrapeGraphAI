@@ -8,11 +8,13 @@ namespace ScrapeGraphAI
         /// Start Searchscraper
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.CompletedSearchScraperResponse> StartSearchscraperV1SearchscraperPostAsync(
 
             global::ScrapeGraphAI.SearchScraperRequest request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Start Searchscraper
@@ -58,6 +60,7 @@ namespace ScrapeGraphAI
         /// <param name="timeRange">
         /// The date range to search in
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::ScrapeGraphAI.CompletedSearchScraperResponse> StartSearchscraperV1SearchscraperPostAsync(
@@ -73,6 +76,7 @@ namespace ScrapeGraphAI
             string? webhookUrl = default,
             string? locationGeoCode = default,
             global::ScrapeGraphAI.TimeRange? timeRange = default,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
