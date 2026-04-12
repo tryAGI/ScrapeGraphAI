@@ -92,7 +92,7 @@ namespace ScrapeGraphAI
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -146,7 +146,7 @@ namespace ScrapeGraphAI
                                 operationId: "ProxyX402PathPut2",
                                 methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "POST",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -173,7 +173,7 @@ namespace ScrapeGraphAI
                                 operationId: "ProxyX402PathPut2",
                                 methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "POST",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -208,7 +208,7 @@ namespace ScrapeGraphAI
                                 operationId: "ProxyX402PathPut2",
                                 methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "POST",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -255,7 +255,7 @@ namespace ScrapeGraphAI
                                 operationId: "ProxyX402PathPut2",
                                 methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "POST",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -275,7 +275,7 @@ namespace ScrapeGraphAI
                                 operationId: "ProxyX402PathPut2",
                                 methodName: "ProxyX402PathPut2Async",
                                 pathTemplate: "$\"/x402/{path}\"",
-                                httpMethod: "POST",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
