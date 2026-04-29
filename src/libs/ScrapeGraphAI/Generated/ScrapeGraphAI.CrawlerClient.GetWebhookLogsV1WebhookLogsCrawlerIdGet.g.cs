@@ -125,7 +125,7 @@ namespace ScrapeGraphAI
                 PrepareGetWebhookLogsV1WebhookLogsCrawlerIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    crawlerId: crawlerId);
+                    crawlerId: crawlerId!);
 
                 return __httpRequest;
             }

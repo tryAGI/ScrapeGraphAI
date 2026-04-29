@@ -153,7 +153,7 @@ namespace ScrapeGraphAI
                 PrepareGetJobExecutionsV1ScheduledJobsJobIdExecutionsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    jobId: jobId,
+                    jobId: jobId!,
                     page: page,
                     pageSize: pageSize,
                     status: status);

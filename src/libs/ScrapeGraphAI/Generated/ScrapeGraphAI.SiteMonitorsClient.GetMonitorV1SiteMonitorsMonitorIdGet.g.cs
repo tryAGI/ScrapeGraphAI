@@ -125,7 +125,7 @@ namespace ScrapeGraphAI
                 PrepareGetMonitorV1SiteMonitorsMonitorIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    monitorId: monitorId);
+                    monitorId: monitorId!);
 
                 return __httpRequest;
             }

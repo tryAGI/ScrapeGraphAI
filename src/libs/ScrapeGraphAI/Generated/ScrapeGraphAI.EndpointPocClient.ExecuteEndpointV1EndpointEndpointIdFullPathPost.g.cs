@@ -143,8 +143,8 @@ namespace ScrapeGraphAI
                 PrepareExecuteEndpointV1EndpointEndpointIdFullPathPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    endpointId: endpointId,
-                    fullPath: fullPath,
+                    endpointId: endpointId!,
+                    fullPath: fullPath!,
                     request: request);
 
                 return __httpRequest;
