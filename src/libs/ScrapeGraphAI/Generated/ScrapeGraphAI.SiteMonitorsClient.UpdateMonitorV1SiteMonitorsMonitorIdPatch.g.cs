@@ -139,7 +139,7 @@ namespace ScrapeGraphAI
                 PrepareUpdateMonitorV1SiteMonitorsMonitorIdPatchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    monitorId: monitorId,
+                    monitorId: monitorId!,
                     request: request);
 
                 return __httpRequest;

@@ -139,7 +139,7 @@ namespace ScrapeGraphAI
                 PrepareUpdateScheduledJobV1ScheduledJobsJobIdPatchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    jobId: jobId,
+                    jobId: jobId!,
                     request: request);
 
                 return __httpRequest;

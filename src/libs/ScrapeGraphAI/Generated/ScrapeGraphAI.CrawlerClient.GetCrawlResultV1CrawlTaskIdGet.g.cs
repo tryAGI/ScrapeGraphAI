@@ -125,7 +125,7 @@ namespace ScrapeGraphAI
                 PrepareGetCrawlResultV1CrawlTaskIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    taskId: taskId);
+                    taskId: taskId!);
 
                 return __httpRequest;
             }

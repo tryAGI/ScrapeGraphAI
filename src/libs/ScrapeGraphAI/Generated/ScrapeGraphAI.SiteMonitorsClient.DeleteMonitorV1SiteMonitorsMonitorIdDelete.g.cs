@@ -125,7 +125,7 @@ namespace ScrapeGraphAI
                 PrepareDeleteMonitorV1SiteMonitorsMonitorIdDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    monitorId: monitorId);
+                    monitorId: monitorId!);
 
                 return __httpRequest;
             }

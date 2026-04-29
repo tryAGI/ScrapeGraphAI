@@ -138,7 +138,7 @@ namespace ScrapeGraphAI
                 PrepareReplaceScheduledJobV1ScheduledJobsJobIdPutRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    jobId: jobId,
+                    jobId: jobId!,
                     request: request);
 
                 return __httpRequest;

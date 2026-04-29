@@ -125,7 +125,7 @@ namespace ScrapeGraphAI
                 PrepareGetWebhookStatusV1WebhookStatusWebhookIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    webhookId: webhookId);
+                    webhookId: webhookId!);
 
                 return __httpRequest;
             }
