@@ -24,6 +24,21 @@ namespace ScrapeGraphAI
         /// Update a site monitor. Schedule is updated if cron or config changed.
         /// </summary>
         /// <param name="monitorId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::ScrapeGraphAI.AutoSDKHttpResponse<global::ScrapeGraphAI.SiteMonitorResponse>> UpdateMonitorV1SiteMonitorsMonitorIdPatchAsResponseAsync(
+            string monitorId,
+
+            global::ScrapeGraphAI.SiteMonitorUpdate request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update Monitor<br/>
+        /// Update a site monitor. Schedule is updated if cron or config changed.
+        /// </summary>
+        /// <param name="monitorId"></param>
         /// <param name="name"></param>
         /// <param name="webhookUrl"></param>
         /// <param name="cronExpression"></param>

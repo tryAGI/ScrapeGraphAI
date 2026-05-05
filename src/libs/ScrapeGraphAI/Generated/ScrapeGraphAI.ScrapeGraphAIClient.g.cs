@@ -42,7 +42,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public AdminClient Admin => new AdminClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AdminClient Admin => new AdminClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -51,7 +51,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public AgenticScrapperClient AgenticScrapper => new AgenticScrapperClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AgenticScrapperClient AgenticScrapper => new AgenticScrapperClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -60,7 +60,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public CrawlerClient Crawler => new CrawlerClient(HttpClient, authorizations: Authorizations, options: Options)
+        public CrawlerClient Crawler => new CrawlerClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -69,7 +69,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public EndpointPocClient EndpointPoc => new EndpointPocClient(HttpClient, authorizations: Authorizations, options: Options)
+        public EndpointPocClient EndpointPoc => new EndpointPocClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -78,7 +78,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public HealthClient Health => new HealthClient(HttpClient, authorizations: Authorizations, options: Options)
+        public HealthClient Health => new HealthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -87,7 +87,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public HistoryClient History => new HistoryClient(HttpClient, authorizations: Authorizations, options: Options)
+        public HistoryClient History => new HistoryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -96,7 +96,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public MarkdownifyClient Markdownify => new MarkdownifyClient(HttpClient, authorizations: Authorizations, options: Options)
+        public MarkdownifyClient Markdownify => new MarkdownifyClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -105,7 +105,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public OrthogonalClient Orthogonal => new OrthogonalClient(HttpClient, authorizations: Authorizations, options: Options)
+        public OrthogonalClient Orthogonal => new OrthogonalClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -114,7 +114,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public ScheduledJobsClient ScheduledJobs => new ScheduledJobsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ScheduledJobsClient ScheduledJobs => new ScheduledJobsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -123,7 +123,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public SchemaGeneratorClient SchemaGenerator => new SchemaGeneratorClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SchemaGeneratorClient SchemaGenerator => new SchemaGeneratorClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -132,7 +132,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public ScrapeClient Scrape => new ScrapeClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ScrapeClient Scrape => new ScrapeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -141,7 +141,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public SearchScraperClient SearchScraper => new SearchScraperClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SearchScraperClient SearchScraper => new SearchScraperClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -150,7 +150,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public SiteMonitorsClient SiteMonitors => new SiteMonitorsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SiteMonitorsClient SiteMonitors => new SiteMonitorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -159,7 +159,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public SitemapClient Sitemap => new SitemapClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SitemapClient Sitemap => new SitemapClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -168,7 +168,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public SmartScraperClient SmartScraper => new SmartScraperClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SmartScraperClient SmartScraper => new SmartScraperClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -177,7 +177,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public ToonifyClient Toonify => new ToonifyClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ToonifyClient Toonify => new ToonifyClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -186,7 +186,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public UsageClient Usage => new UsageClient(HttpClient, authorizations: Authorizations, options: Options)
+        public UsageClient Usage => new UsageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -195,7 +195,7 @@ namespace ScrapeGraphAI
         /// <summary>
         /// 
         /// </summary>
-        public UserClient User => new UserClient(HttpClient, authorizations: Authorizations, options: Options)
+        public UserClient User => new UserClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -234,10 +234,10 @@ namespace ScrapeGraphAI
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
         public ScrapeGraphAIClient(
-            global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::ScrapeGraphAI.EndPointAuthorization>? authorizations = null,
-            global::ScrapeGraphAI.AutoSDKClientOptions? options = null,
+            global::System.Net.Http.HttpClient? httpClient,
+            global::System.Uri? baseUri,
+            global::System.Collections.Generic.List<global::ScrapeGraphAI.EndPointAuthorization>? authorizations,
+            global::ScrapeGraphAI.AutoSDKClientOptions? options,
             bool disposeHttpClient = true)
         {
 

@@ -23,6 +23,20 @@ namespace ScrapeGraphAI
         /// Generate a refined search prompt and a structured JSON schema for analyzing search results.<br/>
         ///     Optionally modify an existing schema to better fit the current search query.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::ScrapeGraphAI.AutoSDKHttpResponse<global::ScrapeGraphAI.SchemaGenerationResponse>> StartGenerateSchemaV1GenerateSchemaPostAsResponseAsync(
+
+            global::ScrapeGraphAI.SchemaGenerationRequest request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Generate or modify a JSON schema based on a search query<br/>
+        /// Generate a refined search prompt and a structured JSON schema for analyzing search results.<br/>
+        ///     Optionally modify an existing schema to better fit the current search query.
+        /// </summary>
         /// <param name="userPrompt">
         /// The user's search query to be refined
         /// </param>
