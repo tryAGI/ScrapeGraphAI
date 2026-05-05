@@ -21,6 +21,19 @@ namespace ScrapeGraphAI
         /// Start Crawl<br/>
         /// Start a new crawl job.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::ScrapeGraphAI.AutoSDKHttpResponse<string>> StartCrawlV1CrawlPostAsResponseAsync(
+
+            global::ScrapeGraphAI.CrawlJob request,
+            global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Start Crawl<br/>
+        /// Start a new crawl job.
+        /// </summary>
         /// <param name="url"></param>
         /// <param name="depth">
         /// Default Value: 1
