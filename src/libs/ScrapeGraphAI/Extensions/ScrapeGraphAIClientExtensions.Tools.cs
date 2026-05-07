@@ -104,11 +104,11 @@ public static class ScrapeGraphAIToolExtensions
                 var response = await client.User.GetCreditsV1CreditsGetAsync(
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     remaining_credits = response.RemainingCredits,
                     total_credits_used = response.TotalCreditsUsed,
-                });
+                };
             },
             name: "GetCredits",
             description: "Retrieves the current ScrapeGraphAI API credit balance and total credits used.");
@@ -132,12 +132,12 @@ public static class ScrapeGraphAIToolExtensions
                     websiteUrl: websiteUrl,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     request_id = response.RequestId,
                     url_count = response.Urls.Count,
                     urls = response.Urls,
-                });
+                };
             },
             name: "GetSitemap",
             description: "Extracts all URLs from a website's sitemap. Returns a list of discovered URLs for the given domain.");
@@ -158,7 +158,7 @@ public static class ScrapeGraphAIToolExtensions
 
         if (response.Result is { } result)
         {
-            parts.Add($"Result: {JsonSerializer.Serialize(result)}");
+            parts.Add($"Result: {FormatResult(result)}");
         }
 
         if (!string.IsNullOrEmpty(response.Error))
@@ -180,7 +180,7 @@ public static class ScrapeGraphAIToolExtensions
 
         if (response.Result is { } result)
         {
-            parts.Add($"Result: {JsonSerializer.Serialize(result)}");
+            parts.Add($"Result: {FormatResult(result)}");
         }
 
         if (response.ReferenceUrls is { Count: > 0 } urls)
@@ -220,5 +220,24 @@ public static class ScrapeGraphAIToolExtensions
         }
 
         return string.Join("\n", parts);
+    }
+
+    private static string FormatResult(object result)
+    {
+        if (result is JsonElement jsonElement)
+        {
+            return jsonElement.ValueKind == JsonValueKind.String
+                ? jsonElement.GetString() ?? string.Empty
+                : jsonElement.GetRawText();
+        }
+
+        try
+        {
+            return JsonSerializer.Serialize(result, result.GetType(), SourceGenerationContext.Default);
+        }
+        catch (NotSupportedException)
+        {
+            return result.ToString() ?? string.Empty;
+        }
     }
 }
