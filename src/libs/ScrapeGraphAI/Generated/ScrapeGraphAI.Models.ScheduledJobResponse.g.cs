@@ -139,5 +139,6 @@ namespace ScrapeGraphAI
         public ScheduledJobResponse()
         {
         }
+
     }
 }

@@ -156,5 +156,6 @@ namespace ScrapeGraphAI
         public SiteMonitorResponse()
         {
         }
+
     }
 }

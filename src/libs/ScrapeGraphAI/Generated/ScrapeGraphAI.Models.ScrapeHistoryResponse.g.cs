@@ -49,5 +49,6 @@ namespace ScrapeGraphAI
         public ScrapeHistoryResponse()
         {
         }
+
     }
 }

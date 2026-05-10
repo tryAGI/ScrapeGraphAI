@@ -93,5 +93,6 @@ namespace ScrapeGraphAI
         public SchemaGenerationResponse()
         {
         }
+
     }
 }

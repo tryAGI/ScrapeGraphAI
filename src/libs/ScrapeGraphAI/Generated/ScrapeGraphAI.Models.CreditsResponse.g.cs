@@ -50,5 +50,6 @@ namespace ScrapeGraphAI
         public CreditsResponse()
         {
         }
+
     }
 }

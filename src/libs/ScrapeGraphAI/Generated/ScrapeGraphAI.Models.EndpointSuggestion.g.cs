@@ -110,5 +110,6 @@ namespace ScrapeGraphAI
         public EndpointSuggestion()
         {
         }
+
     }
 }

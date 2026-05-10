@@ -122,5 +122,6 @@ namespace ScrapeGraphAI
         public WorkflowDefinition()
         {
         }
+
     }
 }

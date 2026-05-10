@@ -137,5 +137,6 @@ namespace ScrapeGraphAI
         public WorkflowExecutionResult()
         {
         }
+
     }
 }

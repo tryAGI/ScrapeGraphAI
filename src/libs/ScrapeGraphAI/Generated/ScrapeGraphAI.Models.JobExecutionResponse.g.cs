@@ -118,5 +118,6 @@ namespace ScrapeGraphAI
         public JobExecutionResponse()
         {
         }
+
     }
 }

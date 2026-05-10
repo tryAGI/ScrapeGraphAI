@@ -201,5 +201,6 @@ namespace ScrapeGraphAI
         public CrawlJob()
         {
         }
+
     }
 }

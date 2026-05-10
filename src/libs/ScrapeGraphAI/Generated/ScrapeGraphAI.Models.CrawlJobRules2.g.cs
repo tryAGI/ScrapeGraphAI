@@ -72,5 +72,6 @@ namespace ScrapeGraphAI
         public CrawlJobRules2()
         {
         }
+
     }
 }

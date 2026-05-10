@@ -52,5 +52,6 @@ namespace ScrapeGraphAI
         public SiteMonitorExtractionConfig()
         {
         }
+
     }
 }
