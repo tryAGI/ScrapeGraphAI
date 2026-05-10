@@ -90,5 +90,6 @@ namespace ScrapeGraphAI
         public SiteMonitorCreate()
         {
         }
+
     }
 }

@@ -53,5 +53,6 @@ namespace ScrapeGraphAI
         public SitemapHistoryResponse()
         {
         }
+
     }
 }

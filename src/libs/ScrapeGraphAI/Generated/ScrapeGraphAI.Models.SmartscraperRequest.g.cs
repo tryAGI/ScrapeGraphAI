@@ -291,5 +291,6 @@ namespace ScrapeGraphAI
         public SmartscraperRequest()
         {
         }
+
     }
 }

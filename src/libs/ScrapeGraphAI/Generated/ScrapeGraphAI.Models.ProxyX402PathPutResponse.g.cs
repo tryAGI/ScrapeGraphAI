@@ -6,7 +6,7 @@ namespace ScrapeGraphAI
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class ProxyX402PathGetResponse2
+    public sealed partial class ProxyX402PathPutResponse
     {
 
         /// <summary>
@@ -14,5 +14,6 @@ namespace ScrapeGraphAI
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
     }
 }

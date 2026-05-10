@@ -88,5 +88,6 @@ namespace ScrapeGraphAI
         public SubWorkflowStep()
         {
         }
+
     }
 }

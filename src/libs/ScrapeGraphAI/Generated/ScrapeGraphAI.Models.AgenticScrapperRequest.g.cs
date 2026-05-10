@@ -134,5 +134,6 @@ namespace ScrapeGraphAI
         public AgenticScrapperRequest()
         {
         }
+
     }
 }

@@ -70,5 +70,6 @@ namespace ScrapeGraphAI
         public JobTriggerResponse()
         {
         }
+
     }
 }

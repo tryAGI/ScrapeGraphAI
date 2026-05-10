@@ -71,5 +71,6 @@ namespace ScrapeGraphAI
         public FeedbackResponse()
         {
         }
+
     }
 }
