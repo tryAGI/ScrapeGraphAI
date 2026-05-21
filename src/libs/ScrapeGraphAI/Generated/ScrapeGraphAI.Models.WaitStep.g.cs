@@ -77,5 +77,6 @@ namespace ScrapeGraphAI
         public WaitStep()
         {
         }
+
     }
 }

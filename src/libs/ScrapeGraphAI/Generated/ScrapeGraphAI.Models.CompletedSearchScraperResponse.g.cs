@@ -109,5 +109,6 @@ namespace ScrapeGraphAI
         public CompletedSearchScraperResponse()
         {
         }
+
     }
 }

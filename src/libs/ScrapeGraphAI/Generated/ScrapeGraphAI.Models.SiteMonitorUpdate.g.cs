@@ -75,5 +75,6 @@ namespace ScrapeGraphAI
         public SiteMonitorUpdate()
         {
         }
+
     }
 }

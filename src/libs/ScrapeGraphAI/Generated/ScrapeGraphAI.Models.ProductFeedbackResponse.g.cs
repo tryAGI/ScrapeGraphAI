@@ -41,5 +41,6 @@ namespace ScrapeGraphAI
         public ProductFeedbackResponse()
         {
         }
+
     }
 }

@@ -199,5 +199,6 @@ namespace ScrapeGraphAI
         public CrawlerRequestDB()
         {
         }
+
     }
 }

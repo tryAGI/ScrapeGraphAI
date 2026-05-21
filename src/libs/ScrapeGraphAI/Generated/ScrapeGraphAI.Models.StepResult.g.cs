@@ -91,5 +91,6 @@ namespace ScrapeGraphAI
         public StepResult()
         {
         }
+
     }
 }

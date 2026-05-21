@@ -153,5 +153,6 @@ namespace ScrapeGraphAI
         public SmartscraperRequestDB()
         {
         }
+
     }
 }

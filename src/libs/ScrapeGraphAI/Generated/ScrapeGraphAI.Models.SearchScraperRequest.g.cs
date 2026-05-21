@@ -178,5 +178,6 @@ namespace ScrapeGraphAI
         public SearchScraperRequest()
         {
         }
+
     }
 }

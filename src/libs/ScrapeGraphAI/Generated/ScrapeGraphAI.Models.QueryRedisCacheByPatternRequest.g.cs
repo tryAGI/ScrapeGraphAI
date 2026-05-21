@@ -63,5 +63,6 @@ namespace ScrapeGraphAI
         public QueryRedisCacheByPatternRequest()
         {
         }
+
     }
 }

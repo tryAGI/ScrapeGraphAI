@@ -89,5 +89,6 @@ namespace ScrapeGraphAI
         public CompletedSmartscraperResponse()
         {
         }
+
     }
 }

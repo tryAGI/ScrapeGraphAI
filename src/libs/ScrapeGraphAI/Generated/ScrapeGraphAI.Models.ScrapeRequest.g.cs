@@ -125,5 +125,6 @@ namespace ScrapeGraphAI
         public ScrapeRequest()
         {
         }
+
     }
 }
