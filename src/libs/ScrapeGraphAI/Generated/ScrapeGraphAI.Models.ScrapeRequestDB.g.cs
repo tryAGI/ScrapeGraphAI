@@ -67,7 +67,7 @@ namespace ScrapeGraphAI
         public global::System.DateTime? FinishedAt { get; set; }
 
         /// <summary>
-        /// Default Value: 2026-06-23T08:24:26.227620
+        /// Default Value: 2026-06-24T08:04:27.957479
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_at")]
         public global::System.DateTime? RequestedAt { get; set; }
@@ -110,7 +110,7 @@ namespace ScrapeGraphAI
         /// <param name="error"></param>
         /// <param name="finishedAt"></param>
         /// <param name="requestedAt">
-        /// Default Value: 2026-06-23T08:24:26.227620
+        /// Default Value: 2026-06-24T08:04:27.957479
         /// </param>
         /// <param name="cost">
         /// Default Value: 0
