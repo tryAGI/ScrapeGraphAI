@@ -6,7 +6,7 @@ namespace ScrapeGraphAI
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class ProxyX402PathGetResponse
+    public sealed partial class ProxyX402PathPatchResponse3
     {
 
         /// <summary>
