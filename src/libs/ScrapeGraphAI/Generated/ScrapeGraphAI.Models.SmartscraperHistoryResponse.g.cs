@@ -4,19 +4,19 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SmartscraperHistoryResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::ScrapeGraphAI.SmartscraperRequestDB> Requests { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("next_key")]
         public object? NextKey { get; set; }

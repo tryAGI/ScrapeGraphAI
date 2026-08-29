@@ -29,7 +29,7 @@ namespace ScrapeGraphAI
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
             ref int? pageSize,
-            global::ScrapeGraphAI.ServiceType? serviceType,
+            ref global::ScrapeGraphAI.ServiceType? serviceType,
             bool? isActive);
         partial void PrepareFetchScheduledJobsV1ScheduledJobsGetRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -122,7 +122,7 @@ namespace ScrapeGraphAI
                 httpClient: HttpClient,
                 page: ref page,
                 pageSize: ref pageSize,
-                serviceType: serviceType,
+                serviceType: ref serviceType,
                 isActive: isActive);
 
 
@@ -184,7 +184,7 @@ namespace ScrapeGraphAI
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

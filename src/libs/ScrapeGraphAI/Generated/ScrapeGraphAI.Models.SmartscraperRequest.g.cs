@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SmartscraperRequest
     {
@@ -88,7 +88,7 @@ namespace ScrapeGraphAI
         public string? WebsiteMarkdown { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_schema")]
         public object? OutputSchema { get; set; }

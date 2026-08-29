@@ -4,24 +4,24 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MarkdownifyStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Queued,
     }

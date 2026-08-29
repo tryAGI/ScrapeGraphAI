@@ -4,19 +4,19 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgenticScrapperLiveSessionUrlResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("session_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SessionUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("session_id")]
         [global::System.Text.Json.Serialization.JsonRequired]

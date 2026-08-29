@@ -7,7 +7,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
@@ -72,6 +72,7 @@ namespace ScrapeGraphAI
             typeof(global::ScrapeGraphAI.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.JsonSerializerContextTypes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.ActionStep))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.StepType), TypeInfoPropertyName = "StepType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
@@ -154,7 +155,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.ScrapeRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.ScrapeStatus), TypeInfoPropertyName = "ScrapeStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SearchScraperRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.TimeRange))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.TimeRange), TypeInfoPropertyName = "TimeRange2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SearchscraperHistoryResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::ScrapeGraphAI.SearchscraperRequestDB>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SearchscraperRequestDB))]
@@ -182,7 +183,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<string, int?>), TypeInfoPropertyName = "AnyOfStringInt322")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.WorkflowExecutionResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::ScrapeGraphAI.StepResult>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2), TypeInfoPropertyName = "GetUsageTimelineV1UsageTimelineGetDays22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::ScrapeGraphAI.AgenticScraperRequestDB>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::ScrapeGraphAI.AnyOf<global::ScrapeGraphAI.NavigationStep, global::ScrapeGraphAI.ActionStep, global::ScrapeGraphAI.ExtractionStep, global::ScrapeGraphAI.MarkdownExtractionStep, global::ScrapeGraphAI.LoopStep, global::ScrapeGraphAI.ConditionalStep, global::ScrapeGraphAI.SubWorkflowStep, global::ScrapeGraphAI.WaitStep>>))]

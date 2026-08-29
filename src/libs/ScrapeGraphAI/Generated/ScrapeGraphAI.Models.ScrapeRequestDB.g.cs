@@ -9,20 +9,20 @@ namespace ScrapeGraphAI
     public sealed partial class ScrapeRequestDB
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid RequestId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_id")]
         public global::System.Guid? UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("website_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -35,7 +35,7 @@ namespace ScrapeGraphAI
         public bool? RenderHeavyJs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
         public string? Result { get; set; }
@@ -55,19 +55,19 @@ namespace ScrapeGraphAI
         public object? Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public string? Error { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("finished_at")]
         public global::System.DateTime? FinishedAt { get; set; }
 
         /// <summary>
-        /// Default Value: 2026-08-17T12:27:57.265760
+        /// Default Value: 2026-08-28T05:11:46.653490
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_at")]
         public global::System.DateTime? RequestedAt { get; set; }
@@ -79,7 +79,7 @@ namespace ScrapeGraphAI
         public int? Cost { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_params")]
         public object? RequestParams { get; set; }
@@ -110,7 +110,7 @@ namespace ScrapeGraphAI
         /// <param name="error"></param>
         /// <param name="finishedAt"></param>
         /// <param name="requestedAt">
-        /// Default Value: 2026-08-17T12:27:57.265760
+        /// Default Value: 2026-08-28T05:11:46.653490
         /// </param>
         /// <param name="cost">
         /// Default Value: 0

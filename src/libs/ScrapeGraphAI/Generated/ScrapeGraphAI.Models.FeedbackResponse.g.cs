@@ -4,19 +4,19 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FeedbackResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid FeedbackId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -29,7 +29,7 @@ namespace ScrapeGraphAI
         public string? Message { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback_timestamp")]
         [global::System.Text.Json.Serialization.JsonRequired]

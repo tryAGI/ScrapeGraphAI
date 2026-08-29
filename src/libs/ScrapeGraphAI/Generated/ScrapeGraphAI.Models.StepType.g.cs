@@ -9,35 +9,35 @@ namespace ScrapeGraphAI
     public enum StepType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Action,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Conditional,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Extract,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExtractMarkdown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Loop,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Navigate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Subworkflow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wait,
     }

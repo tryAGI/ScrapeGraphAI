@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SearchScraperRequest
     {
@@ -34,7 +34,7 @@ namespace ScrapeGraphAI
         public global::System.Collections.Generic.Dictionary<string, string>? Headers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_schema")]
         public object? OutputSchema { get; set; }

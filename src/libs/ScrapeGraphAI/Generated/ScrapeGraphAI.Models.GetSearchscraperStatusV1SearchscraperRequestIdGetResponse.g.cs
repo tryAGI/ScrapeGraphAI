@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSearchscraperStatusV1SearchscraperRequestIdGetResponse
     {

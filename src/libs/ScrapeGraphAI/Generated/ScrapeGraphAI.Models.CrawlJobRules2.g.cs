@@ -4,12 +4,12 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CrawlJobRules2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
         public global::System.Collections.Generic.IList<string>? Exclude { get; set; }

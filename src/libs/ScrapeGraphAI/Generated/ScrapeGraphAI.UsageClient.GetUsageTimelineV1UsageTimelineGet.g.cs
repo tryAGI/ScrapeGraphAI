@@ -27,7 +27,7 @@ namespace ScrapeGraphAI
             };
         partial void PrepareGetUsageTimelineV1UsageTimelineGetArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? days);
+            ref global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? days);
         partial void PrepareGetUsageTimelineV1UsageTimelineGetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -83,7 +83,7 @@ namespace ScrapeGraphAI
                 client: HttpClient);
             PrepareGetUsageTimelineV1UsageTimelineGetArguments(
                 httpClient: HttpClient,
-                days: days);
+                days: ref days);
 
 
             var __authorizations = global::ScrapeGraphAI.EndPointSecurityResolver.ResolveAuthorizations(
@@ -141,7 +141,7 @@ namespace ScrapeGraphAI
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
