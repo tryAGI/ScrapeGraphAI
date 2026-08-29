@@ -9,28 +9,28 @@ namespace ScrapeGraphAI
     public sealed partial class JobTriggerResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("execution_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ExecutionId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Message { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scheduled_job_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid ScheduledJobId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggered_at")]
         [global::System.Text.Json.Serialization.JsonRequired]

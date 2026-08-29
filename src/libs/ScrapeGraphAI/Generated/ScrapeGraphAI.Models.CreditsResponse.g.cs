@@ -4,19 +4,19 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreditsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("remaining_credits")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int RemainingCredits { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_credits_used")]
         [global::System.Text.Json.Serialization.JsonRequired]

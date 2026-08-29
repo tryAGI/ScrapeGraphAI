@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FeedbackCreate
     {
@@ -16,14 +16,14 @@ namespace ScrapeGraphAI
         public required global::System.Guid RequestId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rating")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Rating { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback_text")]
         public string? FeedbackText { get; set; }

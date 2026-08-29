@@ -4,28 +4,28 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TimeRange
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Past24Hours,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PastHour,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PastMonth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PastWeek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PastYear,
     }

@@ -20,7 +20,7 @@ namespace ScrapeGraphAI.JsonConverters
                     {
                         return global::ScrapeGraphAI.CrawlStatusExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

@@ -126,7 +126,7 @@ namespace ScrapeGraphAI
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

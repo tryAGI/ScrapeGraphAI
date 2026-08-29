@@ -10,7 +10,7 @@ namespace ScrapeGraphAI
     public sealed partial class ScrapeGraphAIClient : global::ScrapeGraphAI.IScrapeGraphAIClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.scrapegraphai.com/";
 
@@ -37,7 +37,7 @@ namespace ScrapeGraphAI
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::ScrapeGraphAI.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -47,7 +47,7 @@ namespace ScrapeGraphAI
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AdminClient Admin => new AdminClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -56,7 +56,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgenticScrapperClient AgenticScrapper => new AgenticScrapperClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -65,7 +65,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CrawlerClient Crawler => new CrawlerClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -74,7 +74,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EndpointPocClient EndpointPoc => new EndpointPocClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -83,7 +83,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HealthClient Health => new HealthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -92,7 +92,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HistoryClient History => new HistoryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -101,7 +101,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MarkdownifyClient Markdownify => new MarkdownifyClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -110,7 +110,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrthogonalClient Orthogonal => new OrthogonalClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -119,7 +119,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScheduledJobsClient ScheduledJobs => new ScheduledJobsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -128,7 +128,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SchemaGeneratorClient SchemaGenerator => new SchemaGeneratorClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -137,7 +137,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScrapeClient Scrape => new ScrapeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -146,7 +146,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SearchScraperClient SearchScraper => new SearchScraperClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -155,7 +155,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SiteMonitorsClient SiteMonitors => new SiteMonitorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -164,7 +164,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SitemapClient Sitemap => new SitemapClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -173,7 +173,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SmartScraperClient SmartScraper => new SmartScraperClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -182,7 +182,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToonifyClient Toonify => new ToonifyClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -191,7 +191,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageClient Usage => new UsageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -200,7 +200,7 @@ namespace ScrapeGraphAI
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UserClient User => new UserClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

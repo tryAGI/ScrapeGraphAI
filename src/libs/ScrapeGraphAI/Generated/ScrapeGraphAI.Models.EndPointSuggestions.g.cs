@@ -4,12 +4,12 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EndPointSuggestions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("suggestions")]
         [global::System.Text.Json.Serialization.JsonRequired]

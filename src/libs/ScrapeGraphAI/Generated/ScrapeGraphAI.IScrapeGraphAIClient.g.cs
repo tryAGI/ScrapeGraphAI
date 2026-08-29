@@ -39,98 +39,98 @@ namespace ScrapeGraphAI
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AdminClient Admin { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgenticScrapperClient AgenticScrapper { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CrawlerClient Crawler { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EndpointPocClient EndpointPoc { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HealthClient Health { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HistoryClient History { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MarkdownifyClient Markdownify { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrthogonalClient Orthogonal { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScheduledJobsClient ScheduledJobs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SchemaGeneratorClient SchemaGenerator { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScrapeClient Scrape { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SearchScraperClient SearchScraper { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SiteMonitorsClient SiteMonitors { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SitemapClient Sitemap { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SmartScraperClient SmartScraper { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToonifyClient Toonify { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageClient Usage { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UserClient User { get; }
 

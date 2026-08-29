@@ -9,27 +9,27 @@ namespace ScrapeGraphAI
     public enum AgenticScrapperStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processedhtml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processinghtml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Queued,
     }

@@ -4,32 +4,32 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ServiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agenticscrapper,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Markdownify,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Searchscraper,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SiteMonitor,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Smartcrawler,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Smartscraper,
     }

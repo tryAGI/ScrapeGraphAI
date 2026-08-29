@@ -10,7 +10,7 @@ namespace ScrapeGraphAI
     public sealed partial class CrawlerClient : global::ScrapeGraphAI.ICrawlerClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.scrapegraphai.com/";
 
@@ -37,7 +37,7 @@ namespace ScrapeGraphAI
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::ScrapeGraphAI.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

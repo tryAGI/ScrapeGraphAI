@@ -72,7 +72,7 @@ namespace ScrapeGraphAI
         public global::System.Guid? UsageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_params")]
         public object? RequestParams { get; set; }

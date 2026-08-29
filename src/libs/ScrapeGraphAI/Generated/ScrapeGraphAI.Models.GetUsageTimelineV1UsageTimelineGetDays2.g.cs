@@ -4,24 +4,24 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetUsageTimelineV1UsageTimelineGetDays2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x14,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x7,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
     }
