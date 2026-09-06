@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Optional schema for structured extraction
+    ///
     /// </summary>
     public sealed partial class ExtractionStepSchema
     {

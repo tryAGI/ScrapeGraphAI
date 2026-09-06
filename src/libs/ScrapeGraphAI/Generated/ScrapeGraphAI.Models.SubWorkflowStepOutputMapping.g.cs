@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Map subworkflow output variables back to parent context
+    ///
     /// </summary>
     public sealed partial class SubWorkflowStepOutputMapping
     {

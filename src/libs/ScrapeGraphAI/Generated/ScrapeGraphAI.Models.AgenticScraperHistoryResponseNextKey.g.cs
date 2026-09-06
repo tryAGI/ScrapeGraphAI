@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Key for next page
+    ///
     /// </summary>
     public sealed partial class AgenticScraperHistoryResponseNextKey
     {

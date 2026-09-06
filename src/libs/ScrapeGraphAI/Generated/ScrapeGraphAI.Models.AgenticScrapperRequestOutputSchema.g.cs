@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Default Value: {}
+    ///
     /// </summary>
     public sealed partial class AgenticScrapperRequestOutputSchema
     {

@@ -53,9 +53,9 @@ namespace ScrapeGraphAI
 
             typeof(global::ScrapeGraphAI.JsonConverters.TimeRangeNullableJsonConverter),
 
-            typeof(global::ScrapeGraphAI.JsonConverters.GetUsageTimelineV1UsageTimelineGetDays2JsonConverter),
+            typeof(global::ScrapeGraphAI.JsonConverters.GetUsageTimelineV1UsageTimelineGetDaysJsonConverter),
 
-            typeof(global::ScrapeGraphAI.JsonConverters.GetUsageTimelineV1UsageTimelineGetDays2NullableJsonConverter),
+            typeof(global::ScrapeGraphAI.JsonConverters.GetUsageTimelineV1UsageTimelineGetDaysNullableJsonConverter),
 
             typeof(global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string, object>),
 
@@ -109,7 +109,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SubWorkflowStep))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.WaitStep))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CrawlJob))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CrawlJobRules2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CrawlJobRules))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CrawlStatus), TypeInfoPropertyName = "CrawlStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CrawlerHistoryResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::ScrapeGraphAI.CrawlerRequestDB>))]
@@ -183,7 +183,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<string, int?>), TypeInfoPropertyName = "AnyOfStringInt322")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.WorkflowExecutionResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::ScrapeGraphAI.StepResult>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2), TypeInfoPropertyName = "GetUsageTimelineV1UsageTimelineGetDays22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays), TypeInfoPropertyName = "GetUsageTimelineV1UsageTimelineGetDays2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::ScrapeGraphAI.AgenticScraperRequestDB>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::ScrapeGraphAI.AnyOf<global::ScrapeGraphAI.NavigationStep, global::ScrapeGraphAI.ActionStep, global::ScrapeGraphAI.ExtractionStep, global::ScrapeGraphAI.MarkdownExtractionStep, global::ScrapeGraphAI.LoopStep, global::ScrapeGraphAI.ConditionalStep, global::ScrapeGraphAI.SubWorkflowStep, global::ScrapeGraphAI.WaitStep>>))]

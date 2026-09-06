@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// JSON schema for extracted fields (enables structured diff)
+    ///
     /// </summary>
     public sealed partial class SiteMonitorExtractionConfigOutputSchema
     {

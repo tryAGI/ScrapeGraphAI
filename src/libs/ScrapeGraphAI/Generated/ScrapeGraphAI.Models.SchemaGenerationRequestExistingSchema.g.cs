@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Optional existing JSON schema to modify/extend
+    ///
     /// </summary>
     public sealed partial class SchemaGenerationRequestExistingSchema
     {

@@ -4,8 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Cookies to send with the request<br/>
-    /// Default Value: {}
+    ///
     /// </summary>
     public sealed partial class SmartscraperRequestCookies
     {
