@@ -4,7 +4,7 @@
 namespace ScrapeGraphAI
 {
     /// <summary>
-    /// Additional metadata about the request
+    ///
     /// </summary>
     public sealed partial class MarkdownifyRequestDBMetadata
     {

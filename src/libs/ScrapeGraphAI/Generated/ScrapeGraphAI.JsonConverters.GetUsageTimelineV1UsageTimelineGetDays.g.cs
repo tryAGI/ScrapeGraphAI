@@ -3,10 +3,10 @@
 namespace ScrapeGraphAI.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class GetUsageTimelineV1UsageTimelineGetDays2JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2>
+    public sealed class GetUsageTimelineV1UsageTimelineGetDaysJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays>
     {
         /// <inheritdoc />
-        public override global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2 Read(
+        public override global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace ScrapeGraphAI.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2Extensions.ToEnum(stringValue) ?? default;
+                        return global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDaysExtensions.ToEnum(stringValue) ?? default;
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace ScrapeGraphAI.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2)numValue;
+                    return (global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2);
+                    return default(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,12 @@ namespace ScrapeGraphAI.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2 value,
+            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2Extensions.ToValueString(value));
+            writer.WriteStringValue(global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDaysExtensions.ToValueString(value));
         }
     }
 }

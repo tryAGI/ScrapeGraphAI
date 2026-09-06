@@ -27,11 +27,11 @@ namespace ScrapeGraphAI
             };
         partial void PrepareGetUsageTimelineV1UsageTimelineGetArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? days);
+            ref global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays? days);
         partial void PrepareGetUsageTimelineV1UsageTimelineGetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? days);
+            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays? days);
         partial void ProcessGetUsageTimelineV1UsageTimelineGetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -52,7 +52,7 @@ namespace ScrapeGraphAI
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::ScrapeGraphAI.UsageTimelineResponse> GetUsageTimelineV1UsageTimelineGetAsync(
-            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? days = default,
+            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays? days = default,
             global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -75,7 +75,7 @@ namespace ScrapeGraphAI
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::ScrapeGraphAI.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::ScrapeGraphAI.AutoSDKHttpResponse<global::ScrapeGraphAI.UsageTimelineResponse>> GetUsageTimelineV1UsageTimelineGetAsResponseAsync(
-            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? days = default,
+            global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays? days = default,
             global::ScrapeGraphAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

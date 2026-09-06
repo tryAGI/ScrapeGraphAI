@@ -85,7 +85,7 @@ namespace ScrapeGraphAI
             int? maxPages = default,
             string? prompt = default,
             object? schema = default,
-            global::ScrapeGraphAI.CrawlJobRules2? rules = default,
+            global::ScrapeGraphAI.CrawlJobRules? rules = default,
             bool? sitemap = default,
             bool? renderHeavyJs = default,
             bool? extractionMode = default,

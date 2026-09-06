@@ -173,7 +173,7 @@ namespace ScrapeGraphAI
         /// <summary>
         ///
         /// </summary>
-        public global::ScrapeGraphAI.CrawlJobRules2? Type35 { get; set; }
+        public global::ScrapeGraphAI.CrawlJobRules? Type35 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -469,7 +469,7 @@ namespace ScrapeGraphAI
         /// <summary>
         ///
         /// </summary>
-        public global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays2? Type109 { get; set; }
+        public global::ScrapeGraphAI.GetUsageTimelineV1UsageTimelineGetDays? Type109 { get; set; }
 
         /// <summary>
         ///

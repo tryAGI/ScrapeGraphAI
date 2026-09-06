@@ -49,7 +49,7 @@ namespace ScrapeGraphAI
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rules")]
-        public global::ScrapeGraphAI.CrawlJobRules2? Rules { get; set; }
+        public global::ScrapeGraphAI.CrawlJobRules? Rules { get; set; }
 
         /// <summary>
         /// Default Value: true
@@ -166,7 +166,7 @@ namespace ScrapeGraphAI
             int? maxPages,
             string? prompt,
             object? schema,
-            global::ScrapeGraphAI.CrawlJobRules2? rules,
+            global::ScrapeGraphAI.CrawlJobRules? rules,
             bool? sitemap,
             bool? renderHeavyJs,
             bool? extractionMode,
