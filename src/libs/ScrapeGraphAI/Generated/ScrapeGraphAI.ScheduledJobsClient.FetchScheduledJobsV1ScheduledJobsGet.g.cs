@@ -154,7 +154,7 @@ namespace ScrapeGraphAI
                             __pathBuilder
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
-                                .AddOptionalParameter("service_type", serviceType?.ToString())
+                                .AddOptionalParameter("service_type", serviceType?.ToValueString())
                                 .AddOptionalParameter("is_active", isActive?.ToString().ToLowerInvariant())
                                 ;
                             var __path = __pathBuilder.ToString();

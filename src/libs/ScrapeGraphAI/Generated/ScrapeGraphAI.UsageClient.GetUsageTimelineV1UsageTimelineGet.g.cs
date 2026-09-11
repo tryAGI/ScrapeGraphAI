@@ -112,7 +112,7 @@ namespace ScrapeGraphAI
                                 path: "/v1/usage/timeline",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("days", days?.ToString())
+                                .AddOptionalParameter("days", days?.ToValueString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::ScrapeGraphAI.AutoSDKRequestOptionsSupport.AppendQueryParameters(
