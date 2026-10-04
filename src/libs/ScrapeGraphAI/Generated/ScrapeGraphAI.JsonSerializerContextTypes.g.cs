@@ -133,7 +133,7 @@ namespace ScrapeGraphAI
         /// <summary>
         ///
         /// </summary>
-        public global::ScrapeGraphAI.AnyOf<object, string, object>? Type25 { get; set; }
+        public global::ScrapeGraphAI.AnyOf<object, string>? Type25 { get; set; }
         /// <summary>
         ///
         /// </summary>

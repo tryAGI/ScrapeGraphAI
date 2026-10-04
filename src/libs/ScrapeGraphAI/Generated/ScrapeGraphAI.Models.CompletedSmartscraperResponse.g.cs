@@ -40,8 +40,8 @@ namespace ScrapeGraphAI
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string, object>))]
-        public global::ScrapeGraphAI.AnyOf<object, string, object>? Result { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string>))]
+        public global::ScrapeGraphAI.AnyOf<object, string>? Result { get; set; }
 
         /// <summary>
         ///
@@ -72,7 +72,7 @@ namespace ScrapeGraphAI
             global::ScrapeGraphAI.SmartscraperStatus status,
             string userPrompt,
             string? websiteUrl,
-            global::ScrapeGraphAI.AnyOf<object, string, object>? result,
+            global::ScrapeGraphAI.AnyOf<object, string>? result,
             string? error)
         {
             this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
