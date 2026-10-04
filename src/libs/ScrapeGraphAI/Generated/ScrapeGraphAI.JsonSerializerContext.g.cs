@@ -55,7 +55,7 @@ namespace ScrapeGraphAI
 
             typeof(global::ScrapeGraphAI.JsonConverters.GetUsageTimelineV1UsageTimelineGetDaysNullableJsonConverter),
 
-            typeof(global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string, object>),
+            typeof(global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string>),
 
             typeof(global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<global::ScrapeGraphAI.NavigationStep, global::ScrapeGraphAI.ActionStep, global::ScrapeGraphAI.ExtractionStep, global::ScrapeGraphAI.MarkdownExtractionStep, global::ScrapeGraphAI.LoopStep, global::ScrapeGraphAI.ConditionalStep, global::ScrapeGraphAI.SubWorkflowStep, global::ScrapeGraphAI.WaitStep>),
 
@@ -97,7 +97,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SearchScraperStatus), TypeInfoPropertyName = "SearchScraperStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CompletedSmartscraperResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SmartscraperStatus), TypeInfoPropertyName = "SmartscraperStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<object, string, object>), TypeInfoPropertyName = "AnyOfObjectStringObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<object, string>), TypeInfoPropertyName = "AnyOfObjectString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.ConditionalStep))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::ScrapeGraphAI.AnyOf<global::ScrapeGraphAI.NavigationStep, global::ScrapeGraphAI.ActionStep, global::ScrapeGraphAI.ExtractionStep, global::ScrapeGraphAI.MarkdownExtractionStep, global::ScrapeGraphAI.LoopStep, global::ScrapeGraphAI.ConditionalStep, global::ScrapeGraphAI.SubWorkflowStep, global::ScrapeGraphAI.WaitStep>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<global::ScrapeGraphAI.NavigationStep, global::ScrapeGraphAI.ActionStep, global::ScrapeGraphAI.ExtractionStep, global::ScrapeGraphAI.MarkdownExtractionStep, global::ScrapeGraphAI.LoopStep, global::ScrapeGraphAI.ConditionalStep, global::ScrapeGraphAI.SubWorkflowStep, global::ScrapeGraphAI.WaitStep>), TypeInfoPropertyName = "AnyOfNavigationStepActionStepExtractionStepMarkdownExtractionStepLoopStepConditionalStepSubWorkflowStepWaitStep2")]

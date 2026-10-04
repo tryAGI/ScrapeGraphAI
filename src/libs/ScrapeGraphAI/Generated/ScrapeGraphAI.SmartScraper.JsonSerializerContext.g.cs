@@ -20,7 +20,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.CompletedSmartscraperResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SmartscraperStatus), TypeInfoPropertyName = "SmartscraperStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<object, string, object>), TypeInfoPropertyName = "AnyOfObjectStringObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<object, string>), TypeInfoPropertyName = "AnyOfObjectString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.HTTPValidationError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::ScrapeGraphAI.ValidationError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.ValidationError))]
@@ -30,7 +30,7 @@ namespace ScrapeGraphAI
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.SmartscraperStatus?), TypeInfoPropertyName = "NullableSmartscraperStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<object, string, object>?), TypeInfoPropertyName = "NullableAnyOfObjectStringObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<object, string>?), TypeInfoPropertyName = "NullableAnyOfObjectString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.AnyOf<string, int?>?), TypeInfoPropertyName = "NullableAnyOfStringInt322")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::ScrapeGraphAI.ValidationError>))]
@@ -82,7 +82,7 @@ namespace ScrapeGraphAI
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string, object>());
+            options.Converters.Add(new global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<object, string>());
             options.Converters.Add(new global::ScrapeGraphAI.JsonConverters.AnyOfJsonConverter<string, int?>());
             options.Converters.Add(new global::ScrapeGraphAI.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
