@@ -72,6 +72,7 @@ namespace ScrapeGraphAI
     #pragma warning restore CS3016
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.ActionStep))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::ScrapeGraphAI.StepType), TypeInfoPropertyName = "StepType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
